@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <title>TODO list</title>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </head>
+
 <body>
 <div id="header" class="header">
     <h2>Moja lista zadań do zrobienia</h2>
-    <input type="text" id="wyszukiwarka" placeholder="Wyszukaj...">
-    <span onclick="" class="searchEngine">Szukaj</span>
+    <input type="text" id="searcher" placeholder="Wyszukaj...">
+    <span onclick="szukaj()" class="searchButton">Szukaj</span>
 </div>
-<ul id="lista">
-    <li class="checked">Hit the gym</li>
-    <li>Die</li>
-    <li>1234</li>
-</ul>
+
+<table id="taskTable">
+    <tr class="tableHeader">
+        <th style="width: 60%;">Zadanie</th>
+        <th style="width: 20%;">Data wykonania</th>
+        <th style="width: 20%;">Usuń</th>
+    </tr>
+    <tr>
+    </tr>
+</table>
+
 <div id="addPanel" class="footer">
 <input type="text" id="taskInput" placeholder="Nowe zadanie...">
-<span onclick="" class="addBtn">Dodaj</span>
+    <input type="date" id="dateInput">
+<span onclick="dodajzadanie()" class="addBtn">Dodaj</span>
 </div>
 </body>
 </html>
